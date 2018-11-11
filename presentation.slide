@@ -12,3 +12,11 @@ Prasanna V & Kishan B
 .image images/Authentication.jpeg _ 500
 
 .play -edit src/sources/encoding.go /VALIDATE_USERNAME_START_OMIT/,/VALIDATE_USERNAME_END_OMIT/
+
+* Encoding - Is it the proper way then ?
+
+*Definitely*NO!!!*Why*?*
+
+- Anyone can decode it, no permission required. No keys are required. Less secure.
+- Bytes <======> string and vice versa
+- We use it to convert bytes (like images, public key (DER format)) to store as string
