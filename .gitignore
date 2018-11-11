@@ -3,3 +3,4 @@ pkg/
 bin/
 src/sources/vendor
 src/golang.org/
+src/github.com/

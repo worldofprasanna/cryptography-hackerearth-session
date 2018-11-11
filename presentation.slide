@@ -8,3 +8,7 @@ Prasanna V & Kishan B
 ---
 *Source*code:* _https://github.com/worldofprasanna/everyday-cryptography-hackerearth
 
+* Lets build a simple Authentication system
+.image images/Authentication.jpeg _ 500
+
+.play -edit src/sources/encoding.go /VALIDATE_USERNAME_START_OMIT/,/VALIDATE_USERNAME_END_OMIT/
