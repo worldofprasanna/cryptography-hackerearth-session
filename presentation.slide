@@ -10,10 +10,11 @@ Prasanna V & Kishan B
 
 * Lets build a simple Authentication system
 .image images/Authentication.jpeg _ 500
+*Demo*Time*
 
 .play -edit src/sources/encoding.go /VALIDATE_USERNAME_START_OMIT/,/VALIDATE_USERNAME_END_OMIT/
 
-* Encoding - Is it the proper way then ?
+* Base64 Encoding - Is it the proper way then ?
 
 *Definitely*NO!!!*Why*?*
 

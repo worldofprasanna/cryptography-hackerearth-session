@@ -37,7 +37,7 @@ func readEncodedPasswdFile() string {
 func verify(username, password string, users []*User) string {
   for _, user := range users {
     if user.Username == username && user.Password == password {
-      return "Awesome !!! Credentials are perfect."
+      return "Credentials are perfect !! Welcome " + user.Role
     }
   }
   return "Access Denied :-("
