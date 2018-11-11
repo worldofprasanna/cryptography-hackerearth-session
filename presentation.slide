@@ -6,7 +6,7 @@ Tags: cryptography, go, security
 Prasanna V & Kishan B
 
 ---
-*Source*code:* _https://github.com/worldofprasanna/everyday-cryptography-hackerearth
+*Source*code:* _https://github.com/worldofprasanna/everyday-cryptography-hackerearth_
 
 * Lets build a simple Authentication system
 .image images/Authentication.jpeg _ 500
@@ -21,3 +21,83 @@ Prasanna V & Kishan B
 - Anyone can decode it, no permission required. No keys are required. Less secure.
 - Bytes <======> string and vice versa
 - We use it to convert bytes (like images, public key (DER format)) to store as string
+
+* Yet another secure way - Encryption
+.image images/Encryption.jpeg _ 500
+
+.play -edit src/sources/encryption.go /VALIDATE_USERNAME_ENC_START_OMIT/,/VALIDATE_USERNAME_ENC_END_OMIT/
+
+* What s happening here !!!
+
+.image images/BlockCipher.jpg _ 700
+
+- Symmetric key encryption
+- Non Deterministic encryption
+- Block Cipher encryption
+
+* Send information from John <=> Joseph
+
+.image images/InformationExchange.jpg _ 200
+
+Now we know encryption, so we can easily do these,
+     - encrypt the data
+     - send it from John to Joseph
+     - Joseph can decrypt the data using the same key and read the message
+     - Joseph replies using the same mechanism
+
+*Problem*💀*
+*But*how*to*transmit*the*keys*securely*?* 🧐
+
+And the answer is *PKI*
+
+* Public Key cryptography / Asymmetric key encryption
+
+We will see it through an example, PGP
+
+- Generate PGP keys
+- Encrypt the message using public key
+- Send the message
+- Decrypt the message using private key
+
+lets say, instead of directly sending the message we are sending the Symmetric key using PGP. And going forward we will use symmetric keys to exchange data.
+But Why ?
+
+- Symmetric key encryption is much faster than Asymmetric keys.
+- Symmetric key - AES 256, 512 bits
+- Asymmetric key - RSA 1024, 2048, 4096 bits
+
+*Problem*💀*
+*But*how*we*know*the*information*is*not*tampered*and*sent*by*John?* 🧐
+
+And the answer is *Digital*Signatures*
+
+* Digital Signatures
+
+How we know only John is sending the info ?
+Ok. So there should be additional information sent along the message which says,
+    - I am John sending you the message
+    - Some kind of checksum, which says this is the content I am sending
+Lets separate the message and that information by "."
+
+Message.Signature
+
+* Connect all the dots and lets see, How https works ?
+
+- 3 phases handshake
+- Symmetric key exchange using PKI
+
+What happens if the server is not the actual server and instead its a hacker. Simply,
+
+*Man*In*Middle*Attack*
+How this can be prevented ?
+
+And the answer  is *Certificate*Authority*
+
+* Certificate Authority
+
+- Demo using mkcert
+    Explain what is CA
+    Explain how local CA works
+    Explain how chain of trust works in Mac, Chrome browser
+- Demo using lets encrypt ? - is this needed ?
+
