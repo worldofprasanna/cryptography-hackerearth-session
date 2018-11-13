@@ -1,3 +1,4 @@
+#+slide-stylesheet=//fonts.googleapis.com/css?family=Open+Sans:regular,semibold|Varela
 Everyday Cryptography
 What ? How ? Why ?
 15 Nov 2018
@@ -6,15 +7,19 @@ Tags: cryptography, go, security
 Prasanna V & Kishan B
 Application Developer, Thoughtworks
 
+
 * Lets build a simple Authentication system
+.html src/html/line_break.html
+
 .image images/Authentication.jpeg _ 400
 *Demo*Time*
 
 .play -edit src/sources/encoding.go /VALIDATE_USERNAME_START_OMIT/,/VALIDATE_USERNAME_END_OMIT/
 
-.html src/html/test.html
+.html src/html/footer.html
 
 * Base64 Encoding - Is it the proper way then ?
+.html src/html/line_break.html
 
 *Definitely*NO!!!*Why*?*
 
@@ -25,16 +30,19 @@ Application Developer, Thoughtworks
 - Covert bytes to text format.
 - We use it to convert bytes (like images, public key (DER format)) to store as string
 
-.html src/html/test.html
+.html src/html/footer.html
 
 * Yet another secure way - Encryption
+.html src/html/line_break.html
+
 .image images/Encryption.jpeg _ 500
 
 .play -edit src/sources/encryption.go /VALIDATE_USERNAME_ENC_START_OMIT/,/VALIDATE_USERNAME_ENC_END_OMIT/
 
-.html src/html/test.html
+.html src/html/footer.html
 
 * What s happening here !!!
+.html src/html/line_break.html
 
 : presenter notes
 
@@ -44,9 +52,10 @@ Application Developer, Thoughtworks
 - Non Deterministic encryption
 - Block Cipher encryption
 
-.html src/html/test.html
+.html src/html/footer.html
 
 * Send information from John ↔️ Joseph
+.html src/html/line_break.html
 
 .image images/InformationExchange.jpg _ 150
 
@@ -61,17 +70,20 @@ Application Developer, Thoughtworks
 *But*how*to*transmit*the*keys*"(AES-Symmetric-Key)"*securely*?* 🧐
 And the answer is *PKI*
 
-.html src/html/test.html
+.html src/html/footer.html
 
 * Public Key cryptography / Asymmetric key encryption
+.html src/html/line_break.html
 
 .image images/postbox.jpg _ 400
 
 *Demo*Time*
+.code data/asymmetric.demo
 
-.html src/html/test.html
+.html src/html/footer.html
 
 * Revisit the message transfer from John ↔️ Joseph
+.html src/html/line_break.html
 
 Symmetric Vs Asymmetric encryption
 
@@ -84,9 +96,10 @@ Symmetric Vs Asymmetric encryption
 2. How we know the information is not tampered in the middle ?
 
 And the answer is *Digital*Signatures*
-.html src/html/test.html
+.html src/html/footer.html
 
 * Digital Signatures
+.html src/html/line_break.html
 
 - Quick primer on how digital signatures work.
 
@@ -98,8 +111,9 @@ Lets separate the message and that information by "."
 
 Message.Signature
 
-.html src/html/test.html
+.html src/html/footer.html
 * Connect all the dots and lets see, How https works ?
+.html src/html/line_break.html
 
 - 3 phases handshake
 - Key exchange using PKI
@@ -112,17 +126,19 @@ How this can be prevented ?
 
 And the answer  is *Certificate*Authority*
 
-.html src/html/test.html
+.html src/html/footer.html
 * Certificate Authority
+.html src/html/line_break.html
 
 .image images/CertificateAuthority.png _ 400
 
 *Demo*Time*
 
-.html src/html/test.html
+.html src/html/footer.html
 
 * Lets Encrypt
+.html src/html/line_break.html
 
 *Demo*Time*
 
-.html src/html/test.html
+.html src/html/footer.html
