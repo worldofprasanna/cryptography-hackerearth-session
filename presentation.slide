@@ -4,15 +4,15 @@ What ? How ? Why ?
 Tags: cryptography, go, security
 
 Prasanna V & Kishan B
-
----
-*Source*code:* _https://github.com/worldofprasanna/everyday-cryptography-hackerearth_
+Application Developer, Thoughtworks
 
 * Lets build a simple Authentication system
-.image images/Authentication.jpeg _ 500
+.image images/Authentication.jpeg _ 400
 *Demo*Time*
 
 .play -edit src/sources/encoding.go /VALIDATE_USERNAME_START_OMIT/,/VALIDATE_USERNAME_END_OMIT/
+
+.html src/html/test.html
 
 * Base64 Encoding - Is it the proper way then ?
 
@@ -22,18 +22,26 @@ Prasanna V & Kishan B
 - Bytes <======> string and vice versa
 - We use it to convert bytes (like images, public key (DER format)) to store as string
 
+.html src/html/test.html
+
 * Yet another secure way - Encryption
 .image images/Encryption.jpeg _ 500
 
 .play -edit src/sources/encryption.go /VALIDATE_USERNAME_ENC_START_OMIT/,/VALIDATE_USERNAME_ENC_END_OMIT/
 
+.html src/html/test.html
+
 * What s happening here !!!
+
+: presenter notes
 
 .image images/BlockCipher.jpg _ 700
 
 - Symmetric key encryption
 - Non Deterministic encryption
 - Block Cipher encryption
+
+.html src/html/test.html
 
 * Send information from John <=> Joseph
 
@@ -50,14 +58,17 @@ Now we know encryption, so we can easily do these,
 
 And the answer is *PKI*
 
+.html src/html/test.html
+
 * Public Key cryptography / Asymmetric key encryption
 
-We will see it through an example, PGP
+.image images/postbox.jpg _ 400
 
-- Generate PGP keys
-- Encrypt the message using public key
-- Send the message
-- Decrypt the message using private key
+*Demo*Time*
+
+.html src/html/test.html
+
+* Revisit the message transfer from John to Joseph
 
 lets say, instead of directly sending the message we are sending the Symmetric key using PGP. And going forward we will use symmetric keys to exchange data.
 But Why ?
@@ -70,8 +81,11 @@ But Why ?
 *But*how*we*know*the*information*is*not*tampered*and*sent*by*John?* 🧐
 
 And the answer is *Digital*Signatures*
+.html src/html/test.html
 
 * Digital Signatures
+
+- Quick primer on how digital signatures work.
 
 How we know only John is sending the info ?
 Ok. So there should be additional information sent along the message which says,
@@ -81,6 +95,7 @@ Lets separate the message and that information by "."
 
 Message.Signature
 
+.html src/html/test.html
 * Connect all the dots and lets see, How https works ?
 
 - 3 phases handshake
@@ -93,6 +108,7 @@ How this can be prevented ?
 
 And the answer  is *Certificate*Authority*
 
+.html src/html/test.html
 * Certificate Authority
 
 - Demo using mkcert
@@ -100,4 +116,4 @@ And the answer  is *Certificate*Authority*
     Explain how local CA works
     Explain how chain of trust works in Mac, Chrome browser
 - Demo using lets encrypt ? - is this needed ?
-
+.html src/html/test.html
