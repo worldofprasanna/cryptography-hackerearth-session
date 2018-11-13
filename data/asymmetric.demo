@@ -1,4 +1,4 @@
-openssl genrsa -out demo_private.pem 2048
-openssl rsa -in demo_private.pem -pubout -outform PEM -out demo_public.pem
-echo 'Secret Message' | openssl rsautl -encrypt -pubin -inkey demo_public.pem > message.encrypted
-openssl rsautl -decrypt -inkey demo_private.pem -in message.encrypted -out message
+openssl genrsa -out bob_private.pem 2048
+openssl rsa -in bob_private.pem -pubout -outform PEM -out bob_public.pem
+echo 'Hello Crypto' | openssl rsautl -encrypt -pubin -inkey bob_public.pem > message.encrypted
+openssl rsautl -decrypt -inkey bob_private.pem -in message.encrypted -out message

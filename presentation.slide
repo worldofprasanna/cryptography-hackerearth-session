@@ -75,6 +75,7 @@ And the answer is *PKI*
 * Public Key cryptography / Asymmetric key encryption
 .html src/html/line_break.html
 
+.link https://slides.com/worldofprasanna/asymmetric-encryption/live#/ How it works?
 .image images/postbox.jpg _ 400
 
 *Demo*Time*
@@ -90,9 +91,10 @@ Symmetric Vs Asymmetric encryption
 - Symmetric key encryption is much faster than Asymmetric keys.
 - Symmetric key - AES 256, 512 bits
 - Asymmetric key - RSA 1024, 2048, 4096 bits
+- Asymmetric key is more effective in key management
 
 *Problem*💀*
-1. How we know information is sent only by John ?
+1. How we know information is sent only by Alice ?
 2. How we know the information is not tampered in the middle ?
 
 And the answer is *Digital*Signatures*
@@ -115,11 +117,10 @@ Message.Signature
 * Connect all the dots and lets see, How https works ?
 .html src/html/line_break.html
 
-- 3 phases handshake
-- Key exchange using PKI
-- Digital Signatures
+.link https://slides.com/worldofprasanna/https-works/live#/ Everything Together
 
 What happens if the server is not the actual server and instead its a hacker. Simply,
+.image images/MIM.png _ 300
 
 *Man*In*Middle*Attack*
 How this can be prevented ?
@@ -131,8 +132,7 @@ And the answer  is *Certificate*Authority*
 .html src/html/line_break.html
 
 .image images/CertificateAuthority.png _ 400
-
-*Demo*Time*
+.link https://slides.com/worldofprasanna/certificate-authority/live#/ How it works?
 
 .html src/html/footer.html
 
