@@ -1,0 +1,5 @@
+openssl genrsa -out demo.pem 2048
+openssl rsa -in demo.pem -pubout -outform PEM -out demo_public.pem
+openssl rsautl -decrypt -inkey demo.pem -in message.encrypted
+echo 'Hi Alice! Please bring test for dinner!' |\nopenssl rsautl -encrypt -pubin -inkey demo_public.pem > message.encrypted
+openssl rsautl -decrypt -inkey demo.pem -in message.encrypted -out message

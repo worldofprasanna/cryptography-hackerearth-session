@@ -18,8 +18,11 @@ Application Developer, Thoughtworks
 
 *Definitely*NO!!!*Why*?*
 
-- Anyone can decode it, no permission required. No keys are required. Less secure.
-- Bytes <======> string and vice versa
+- Anyone can decode it.
+      No permission required.
+      No keys are required.
+      Less secure.
+- Covert bytes to text format.
 - We use it to convert bytes (like images, public key (DER format)) to store as string
 
 .html src/html/test.html
@@ -43,19 +46,19 @@ Application Developer, Thoughtworks
 
 .html src/html/test.html
 
-* Send information from John <=> Joseph
+* Send information from John ↔️ Joseph
 
-.image images/InformationExchange.jpg _ 200
+.image images/InformationExchange.jpg _ 150
 
-Now we know encryption, so we can easily do these,
-     - encrypt the data
-     - send it from John to Joseph
-     - Joseph can decrypt the data using the same key and read the message
-     - Joseph replies using the same mechanism
 
-*Problem*💀*
-*But*how*to*transmit*the*keys*securely*?* 🧐
+    // Sender                           |       // Receiver
+    secureKey := <AES-Symmetric-Key>    |       secureKey := <AES-Symmetric-Key>
+    message.encrypt(secureKey)          |       message := cipherText.decrypt(secureKey)
+    user.send(message)                  |       fmt.Println(message)
 
+*Problem*💀* :
+
+*But*how*to*transmit*the*keys*"(AES-Symmetric-Key)"*securely*?* 🧐
 And the answer is *PKI*
 
 .html src/html/test.html
@@ -68,17 +71,17 @@ And the answer is *PKI*
 
 .html src/html/test.html
 
-* Revisit the message transfer from John to Joseph
+* Revisit the message transfer from John ↔️ Joseph
 
-lets say, instead of directly sending the message we are sending the Symmetric key using PGP. And going forward we will use symmetric keys to exchange data.
-But Why ?
+Symmetric Vs Asymmetric encryption
 
 - Symmetric key encryption is much faster than Asymmetric keys.
 - Symmetric key - AES 256, 512 bits
 - Asymmetric key - RSA 1024, 2048, 4096 bits
 
 *Problem*💀*
-*But*how*we*know*the*information*is*not*tampered*and*sent*by*John?* 🧐
+1. How we know information is sent only by John ?
+2. How we know the information is not tampered in the middle ?
 
 And the answer is *Digital*Signatures*
 .html src/html/test.html
@@ -99,7 +102,8 @@ Message.Signature
 * Connect all the dots and lets see, How https works ?
 
 - 3 phases handshake
-- Symmetric key exchange using PKI
+- Key exchange using PKI
+- Digital Signatures
 
 What happens if the server is not the actual server and instead its a hacker. Simply,
 
@@ -111,9 +115,14 @@ And the answer  is *Certificate*Authority*
 .html src/html/test.html
 * Certificate Authority
 
-- Demo using mkcert
-    Explain what is CA
-    Explain how local CA works
-    Explain how chain of trust works in Mac, Chrome browser
-- Demo using lets encrypt ? - is this needed ?
+.image images/CertificateAuthority.png _ 400
+
+*Demo*Time*
+
+.html src/html/test.html
+
+* Lets Encrypt
+
+*Demo*Time*
+
 .html src/html/test.html
