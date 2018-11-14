@@ -107,15 +107,15 @@ And the answer is *Digital*Signatures*
 * Digital Signatures
 .html src/html/line_break.html
 
-- Quick primer on how digital signatures work.
+.link https://slides.com/worldofprasanna/digital-signature/live#/ Quick primer
 
-How we know only John is sending the info ?
 Ok. So there should be additional information sent along the message which says,
-    - I am John sending you the message
-    - Some kind of checksum, which says this is the content I am sending
-Lets separate the message and that information by "."
 
-Message.Signature
+    - I am Alice sending you the message
+    - Some kind of checksum, which says this is the content I am sending
+
+Lets separate the message and that information by "."
+Format: Message.Signature
 
 .html src/html/footer.html
 * Connect all the dots and lets see, How https works ?
