@@ -7,9 +7,12 @@ Tags: cryptography, go, security
 Prasanna V & Kishan B
 Application Developer, Thoughtworks
 
-* 
+* About
+.html src/html/line_break.html
 
 .html src/html/built-in-security.html
+
+.html src/html/footer.html
 
 * Lets build a simple Authentication system
 .html src/html/line_break.html
@@ -48,9 +51,7 @@ Application Developer, Thoughtworks
 * What s happening here !!!
 .html src/html/line_break.html
 
-: presenter notes
-
-.image images/BlockCipher.jpg _ 700
+.link https://slides.com/worldofprasanna/deck/live#/ How it works ?
 
 - Symmetric key encryption
 - Non Deterministic encryption
@@ -58,7 +59,7 @@ Application Developer, Thoughtworks
 
 .html src/html/footer.html
 
-* Send information from John ↔️ Joseph
+* Send information from Alice ↔️ Bob
 .html src/html/line_break.html
 
 .image images/InformationExchange.jpg _ 150
@@ -83,25 +84,27 @@ And the answer is *PKI*
 .image images/postbox.jpg _ 400
 
 *Demo*Time*
+
 .code data/asymmetric.demo
 
 .html src/html/footer.html
 
-* Revisit the message transfer from John ↔️ Joseph
+* Revisit the message transfer from Alice ↔️ Bob
 .html src/html/line_break.html
 
 Symmetric Vs Asymmetric encryption
 
-- Symmetric key encryption is much faster than Asymmetric keys.
-- Symmetric key - AES 256, 512 bits
+- Symmetric key encryption is much faster than Asymmetric encryption.
+- Symmetric key - AES 128, 192, 256 bits
 - Asymmetric key - RSA 1024, 2048, 4096 bits
 - Asymmetric key is more effective in key management
 
 *Problem*💀*
-1. How we know information is sent only by Alice ?
-2. How we know the information is not tampered in the middle ?
+1. How do we know information is sent only by Alice ?
+2. How do we know the information is not tampered in the middle ?
 
 And the answer is *Digital*Signatures*
+
 .html src/html/footer.html
 
 * Digital Signatures
@@ -123,7 +126,7 @@ Format: Message.Signature
 
 .link https://slides.com/worldofprasanna/https-works/live#/ Everything Together
 
-What happens if the server is not the actual server and instead its a hacker. Simply,
+What happens if the public key does not belong to twitter, instead its a hacker's public key ?
 .image images/MIM.png _ 300
 
 *Man*In*Middle*Attack*
@@ -135,8 +138,9 @@ And the answer  is *Certificate*Authority*
 * Certificate Authority
 .html src/html/line_break.html
 
-.image images/CertificateAuthority.png _ 400
+.image images/CertificateAuthority.png _ 300
 .link https://slides.com/worldofprasanna/certificate-authority/live#/ How it works?
+.code data/mkcert.demo
 
 .html src/html/footer.html
 
@@ -144,5 +148,15 @@ And the answer  is *Certificate*Authority*
 .html src/html/line_break.html
 
 *Demo*Time*
+
+.html src/html/footer.html
+
+* Thank you
+    Prasanna V
+    Kishan B
+
+Deck can be found at,
+
+.link https://github.com/worldofprasanna/everyday-cryptography-hackerearth
 
 .html src/html/footer.html
