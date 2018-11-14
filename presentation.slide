@@ -7,6 +7,9 @@ Tags: cryptography, go, security
 Prasanna V & Kishan B
 Application Developer, Thoughtworks
 
+* 
+
+.html src/html/built-in-security.html
 
 * Lets build a simple Authentication system
 .html src/html/line_break.html
