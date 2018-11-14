@@ -5,7 +5,7 @@ To run the slide in local,
 
 1. Install go
 2. Install present `go get golang.org/x/tools/cmd/present`
-3. execute the script `./run.sh`
-4. open `http://127.0.0.1:4000/`
-5. enjoy!!!
-
+3. execute the script `./install-deps.sh`
+4. execute the script `./run.sh`
+5. open `http://127.0.0.1:4000/`
+6. enjoy!!!
