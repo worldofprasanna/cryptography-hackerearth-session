@@ -40,7 +40,8 @@ Application Developer, Thoughtworks
 
 .image images/Encryption.jpeg _ 500
 
-.play -edit src/sources/encryption.go /VALIDATE_USERNAME_ENC_START_OMIT/,/VALIDATE_USERNAME_ENC_END_OMIT/
+    $ echo "secret password" | openssl enc -aes-256-cbc -base64
+    $ echo "<encrypted password>" | openssl enc -d -aes-256-cbc -base64
 
 .html src/html/footer.html
 
