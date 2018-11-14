@@ -127,6 +127,7 @@ Format: Message.Signature
 .link https://slides.com/worldofprasanna/https-works/live#/ Everything Together
 
 What happens if the public key does not belong to twitter, instead its a hacker's public key ?
+
 .image images/MIM.png _ 300
 
 *Man*In*Middle*Attack*
@@ -152,8 +153,8 @@ And the answer  is *Certificate*Authority*
 .html src/html/footer.html
 
 * Thank you
-    Prasanna V
-    Kishan B
+    Prasanna V [vprasana@thoughtworks.com]
+    Kishan B [bkishan@thoughtworks.com]
 
 Deck can be found at,
 
